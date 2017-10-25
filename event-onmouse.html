@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+
+	div > button#a{
+
+		width:150px;
+		
+		height:50px;
+		
+		margin:20px;
+	
+		background-color:pink;
+
+	}
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title> Sử dụng bắt sự kiện onmouse </title>
+
+
+     </head>
+
+
+
+
+     <body>
+	<div>
+
+		<button id ="a"  onmouseenter ="this.style.backgroundColor='yellow'" onmouseleave="this.style.backgroundColor='silver'">
+		
+			Xin Chào (đưa nháy chuột vào đây)
+
+		</button>
+
+	</div>
+
+
+
+	<p id="demo"></p>
+
+
+	<script>
+
+		var thongTin = {
+
+			name: "Phan Hải Đăng",	
+			year: 1994,
+			city: "HCM",
+			intro: function(){
+			
+				document.write("- Tôi là: " + this.name + "<br>");		
+				document.write("- Sinh năm: " + this.year + "<br>");		
+				document.write("- Sống tại: " + this.city + "<br>");		
+		
+				
+			},
+		
+			demo: function(){
+
+
+				document.getElementById("demo").innerHTML = thongTin.intro();
+
+
+			}	
+
+		}
+	
+
+	</script>
+  
+
+  
+
+     </body>
+
+
+</html>
+

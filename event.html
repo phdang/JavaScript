@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+
+	div > button#a{
+
+		margin:20px;
+	
+		background-color:pink;
+
+	}
+
+	button#b{
+
+		margin:20px;
+	
+		background-color:silver;
+		
+		color:white;
+
+	}
+
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title> Sử dụng cách bắt sự kiện (event)      </title>
+
+
+     </head>
+
+
+
+
+     <body>
+	<div>
+
+		<button id ="a"  onclick ="thongTin.demo()">Xin Chào (nhấp chuột vào đây)</button>
+
+	</div>
+
+	<button id = "b" ondblclick ="thongTin.demo()">Xin Chào (click đôi chuột vào đây)</button>
+
+
+	<p id="demo"></p>
+
+
+	<script>
+
+		var thongTin = {
+
+			name: "Phan Hải Đăng",	
+			year: 1994,
+			city: "HCM",
+			intro: function(){
+			
+				document.write("- Tôi là: " + this.name + "<br>");		
+				document.write("- Sinh năm: " + this.year + "<br>");		
+				document.write("- Sống tại: " + this.city + "<br>");		
+		
+				
+			},
+		
+			demo: function(){
+
+
+				document.getElementById("demo").innerHTML = thongTin.intro();
+
+
+			}	
+
+		}
+	
+
+	</script>
+  
+
+  
+
+     </body>
+
+
+</html>
+

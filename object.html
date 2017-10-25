@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+
+
+
+
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title> Sử dụng thuộc tính đối tượng (object)      </title>
+
+
+     </head>
+
+
+
+
+     <body>
+
+
+
+
+	<script>
+
+		var thongTin = {
+
+			name: "Phan Hải Đăng",	
+			year: 1994,
+			city: "HCM",
+			intro: function(){
+			
+				document.write("- Tôi là: " + this.name + "<br>");		
+				document.write("- Sinh năm: " + this.year + "<br>");		
+				document.write("- Sống tại: " + this.city + "<br>");		
+		
+				
+			},
+	
+
+		}
+
+   		document.write("Tôi tên: " + thongTin.name + "<br>");
+
+   		document.write("Sinh năm: " + thongTin.year + "<br>");
+
+   		document.write("Thành phố: " + thongTin.city + "<br><hr>");
+	
+		thongTin.intro();		
+
+	</script>
+  
+
+  
+
+     </body>
+
+
+</html>
+

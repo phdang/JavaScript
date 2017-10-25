@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+
+
+
+
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title>Sử dụng function return               </title>
+
+
+     </head>
+
+
+
+
+     <body>
+
+
+	<script>
+
+		function number(a,b){
+
+			return (a+b)*2;
+
+	
+		}
+
+	var result_01 = number(5,10);
+	var result_02 = number(2,8)-5;
+	var result_03 = 5*number(1,4)-49;
+
+	document.write(result_01 + "<hr><br>");	
+	document.write(result_02 + "<hr><br>");	
+	document.write(result_03 + "<hr><br>");	
+
+	</script>
+
+	<script>
+
+		function thongTin(name,year){
+
+			var hoTen = "Họ tên: "+ name;
+
+			var namSinh = "Năm sinh: " + year;
+
+			var thongTinBanThan = hoTen + "<br>" + namSinh;
+
+	
+			return thongTinBanThan;
+	
+		}
+
+		var sinhVien = "Sinh viên <hr>" + thongTin("Phan Hải Đăng", 1994);			
+	
+		
+		document.write(sinhVien)
+
+	</script>
+
+    
+
+
+    
+     </body>
+
+
+</html>
+
