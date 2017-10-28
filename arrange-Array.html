@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+
+
+
+
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title> Sắp xếp thứ tự số trong mảng      </title>
+
+
+     </head>
+
+
+
+
+     <body>
+
+	<p id="demo1"></p>
+
+	<p id="demo2"></p>
+
+	<p id="demo3"></p>
+
+	<p id="demo4"></p>
+
+	<p id="demo5"></p>
+
+	<p id="demo6"></p>
+
+	<p id="demo7"></p>
+
+	<p id="demo8"></p>
+	
+
+	<script>
+
+		var score = [40,100,1,6,35,10];
+
+
+		document.getElementById("demo1").innerHTML = "Dãy số ban đầu trong mảng: " + score;
+	
+		score.sort(function(a,b){
+
+
+			return a-b;
+
+		})
+
+
+		document.getElementById("demo2").innerHTML = "Dãy số trong mảng sau khi sắp xếp từ bé đến lớn: " + score;
+
+		
+		score.sort(function(a,b){
+		
+
+			return b-a;
+
+		})
+
+
+		document.getElementById("demo3").innerHTML = "Dãy số trong mảng sau khi được sắp xếp từ lớn đến bé: " +score;
+
+
+		var score = [40,100,1,6,35,10];
+
+		
+		function giaTriLonNhat(arr){
+
+
+			return Math.max.apply(null,arr);
+
+		}
+
+		document.getElementById("demo4").innerHTML = "Số lớn nhất trong mảng: " + giaTriLonNhat(score);
+
+    
+		function giaTriNhoNhat(arr){
+
+
+			return Math.min.apply(null,arr);
+
+		}
+
+		document.getElementById("demo5").innerHTML = "Số nhỏ nhất trong mảng: " + giaTriNhoNhat(score);
+
+
+	</script>
+  
+
+  
+
+     </body>
+
+
+</html>
+

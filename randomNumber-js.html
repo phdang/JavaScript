@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+	.abc{
+
+		width:200px;
+
+		background-color: lightCyan;
+
+	}
+
+	.xyz{
+
+		width:200px;
+
+
+		background-color:pink;
+
+	}
+
+
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title>       </title>
+
+
+     </head>
+
+
+
+
+     <body>
+
+	<button class = "abc" type ="button" name="randomNumber" onclick="taoSoNgauNhien0Den9()">Click vào đây để tạo số ngẫu nhiên từ 0 đến 10</button>
+	
+	<p id="demo1"><p>
+
+	<button class = "xyz" type ="button" name="randomNumber" onclick="taoSoNgauNhienTrongDoan(1,45)">Click vào đây để tạo số ngẫu nhiên từ 1 đến 45</button>
+
+	<p id="demo2"><p>
+
+	<script>
+
+		function taoSoNgauNhien0Den9(){
+	
+			var a = Math.floor(Math.random()*10);
+
+			document.getElementById("demo1").innerHTML = a;
+
+
+		}
+    
+		function taoSoNgauNhienTrongDoan(min,max){
+	
+			var b = Math.floor(Math.random()*(max-min+1))+min;
+
+			document.getElementById("demo2").innerHTML = b;
+
+
+		}
+
+	
+	</script>
+  
+
+  
+
+     </body>
+
+
+</html>
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+
+
+
+
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title> Sắp xếp tuổi và tên tăng dần trong đối tượng     </title>
+
+
+     </head>
+
+
+
+
+     <body>
+
+
+
+
+	<script>
+
+	var student = [
+	
+	{name:"Chung", age:17},
+
+	{name:"Anh", age:18},
+
+	{name: "Bao", age:15},
+	
+	];
+
+	document.write("<hr>Mảng ban đầu<hr>");
+
+	document.write("<p>" + student[0].name + " - " + student[0].age + "</p>");
+
+	document.write("<p>" + student[1].name + " - " + student[1].age + "</p>");
+
+	document.write("<p>" + student[2].name + " - " + student[2].age + "</p>");
+
+
+	student.sort(function(a,b){
+
+		return a.age-b.age;
+
+
+	});
+
+	document.write("<hr>Mảng sau khi đã sắp xếp lại theo tuổi tăng dần <hr>");
+
+	document.write("<p>" + student[0].name + " - " + student[0].age + "</p>");
+
+	document.write("<p>" + student[1].name + " - " + student[1].age + "</p>");
+
+	document.write("<p>" + student[2].name + " - " + student[2].age + "</p>");
+
+    
+	student.sort(function(a,b){
+
+		if (a.name.toLowerCase() < b.name.toLowerCase()) {
+
+			return -1;		
+	
+		}
+
+		if (a.name.toLowerCase() > b.name.toLowerCase()) {
+
+			return 1;		
+	
+		}
+
+		return 0;
+
+	});
+
+	document.write("<hr>Mảng sau khi đã sắp xếp lại theo tên tăng dần trong từ điển <hr>");
+
+	document.write("<p>" + student[0].name + " - " + student[0].age + "</p>");
+
+	document.write("<p>" + student[1].name + " - " + student[1].age + "</p>");
+
+	document.write("<p>" + student[2].name + " - " + student[2].age + "</p>");
+
+
+	</script>
+  
+
+  
+
+     </body>
+
+
+</html>
+
