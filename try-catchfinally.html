@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+	
+
+
+
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title>Try, catch và finally       </title>
+
+
+     </head>
+
+
+
+
+     <body>
+
+	<input type = "text" id = "number">
+
+	<button type = "button" onclick="kiemTraPhanTu()">Kiểm tra</button>
+
+	<p id="demo"> </p>
+
+
+	<script>
+
+		function kiemTraPhanTu(){
+
+			document.getElementById("demo").innerHTML = " ";
+	
+			var number = document.getElementById("number").value;
+	
+			try{
+				if (number == ""){
+			
+					throw "Bạn chưa nhập giá trị";
+				
+				}else if (isNaN(number)){
+
+					throw "Giá trị bạn nhập không phải một số";
+
+				}else if (number<0){
+			
+					throw "Giá trị bạn nhập nhỏ hơn 0";
+				}
+				
+				document.getElementById("demo").innerHTML = "Hợp lệ";		
+			   }
+
+	
+			catch(err){
+				
+				alert(err);
+			
+			}
+
+			finally{
+
+			document.getElementById("number").value = "";
+
+    			}
+
+		}
+
+	</script>
+  
+
+  
+
+     </body>
+
+
+</html>
+
