@@ -2,66 +2,56 @@
 
 <html>
 
-     <head>
+<head>
 
 
 
-	<style type="text/css">
+  <style type="text/css">
+  </style>
 
 
+  <meta charset="UTF-8">
+
+  <title>Try throw và catch </title>
 
 
-
-
-
-	</style>
-
-
-	<meta charset ="UTF-8">
-
-	<title>Try throw và catch </title>
-
-
-     </head>
+</head>
 
 
 
 
-     <body>
+<body>
 
 
 
 
-	<script>
+  <script>
+    document.write("<p>Tài liệu học HTML</p>");
 
-		document.write("<p>Tài liệu học HTML</p>");
+    try {
 
-		try{
-
-		document.write("<p>Tài liệu học CSS</p>");
-		
-
-		throw ("Chất lượng bài viết chưa được tối ưu");
-
-		document.write("<p>Tài liệu học MySQL</p>");
-		
-		document.write("<p>Tài liệu học PHP</p>");
+      document.write("<p>Tài liệu học CSS</p>");
 
 
-		}catch(err){
-    
-			document.write("Thông tin lỗi: " + err);
-		}
+      throw ("Chất lượng bài viết chưa được tối ưu");
 
-		document.write("<p> Học lập trình Web</p>");
+      document.write("<p>Tài liệu học MySQL</p>");
 
-	</script>
-  
+      document.write("<p>Tài liệu học PHP</p>");
 
-  
 
-     </body>
+    } catch (err) {
+
+      document.write("Thông tin lỗi: " + err);
+    }
+
+    document.write("<p> Học lập trình Web</p>");
+  </script>
+
+
+
+
+</body>
 
 
 </html>
-

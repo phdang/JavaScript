@@ -2,87 +2,72 @@
 
 <html>
 
-     <head>
+<head>
 
 
 
-	<style type="text/css">
-
-	
-
+  <style type="text/css">
+  </style>
 
 
+  <meta charset="UTF-8">
+
+  <title>Try, catch và finally </title>
 
 
-	</style>
-
-
-	<meta charset ="UTF-8">
-
-	<title>Try, catch và finally       </title>
-
-
-     </head>
+</head>
 
 
 
 
-     <body>
+<body>
 
-	<input type = "text" id = "number">
+  <input type="text" id="number">
 
-	<button type = "button" onclick="kiemTraPhanTu()">Kiểm tra</button>
+  <button type="button" onclick="kiemTraPhanTu()">Kiểm tra</button>
 
-	<p id="demo"> </p>
+  <p id="demo"> </p>
 
 
-	<script>
+  <script>
+    function kiemTraPhanTu() {
 
-		function kiemTraPhanTu(){
+      document.getElementById("demo").innerHTML = " ";
 
-			document.getElementById("demo").innerHTML = " ";
-	
-			var number = document.getElementById("number").value;
-	
-			try{
-				if (number == ""){
-			
-					throw "Bạn chưa nhập giá trị";
-				
-				}else if (isNaN(number)){
+      var number = document.getElementById("number").value;
 
-					throw "Giá trị bạn nhập không phải một số";
+      try {
+        if (number == "") {
 
-				}else if (number<0){
-			
-					throw "Giá trị bạn nhập nhỏ hơn 0";
-				}
-				
-				document.getElementById("demo").innerHTML = "Hợp lệ";		
-			   }
+          throw "Bạn chưa nhập giá trị";
 
-	
-			catch(err){
-				
-				alert(err);
-			
-			}
+        } else if (isNaN(number)) {
 
-			finally{
+          throw "Giá trị bạn nhập không phải một số";
 
-			document.getElementById("number").value = "";
+        } else if (number < 0) {
 
-    			}
+          throw "Giá trị bạn nhập nhỏ hơn 0";
+        }
 
-		}
+        document.getElementById("demo").innerHTML = "Hợp lệ";
+      } catch (err) {
 
-	</script>
-  
+        alert(err);
 
-  
+      } finally {
 
-     </body>
+        document.getElementById("number").value = "";
+
+      }
+
+    }
+  </script>
+
+
+
+
+</body>
 
 
 </html>
-
