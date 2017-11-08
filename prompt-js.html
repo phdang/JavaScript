@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+
+
+
+
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title>Minh hoạ dùng hộp thoại prompt </title>
+
+
+     </head>
+
+
+
+
+     <body>
+
+	<p id="demo"></p>
+
+	<button type="button" onclick="promptBox()">Click vào đây</button>
+
+
+	<script>
+
+		function promptBox(){
+
+			var userName = prompt("Nhập tên đăng nhập của bạn:");
+
+			if(userName != null){
+
+				document.getElementById("demo").innerHTML="Tên đăng nhập của bạn: " + userName;
+
+			}else{
+
+				document.getElementById("demo").innerHTML="Bạn đã bấm nút huỷ";
+
+			} 
+
+		}
+
+	</script>
+  
+
+  
+
+     </body>
+
+
+</html>
+

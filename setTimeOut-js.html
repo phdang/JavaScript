@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+
+
+
+
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title>Minh họa dùng setTimeOut </title>
+
+
+     </head>
+
+
+
+
+     <body>
+
+	<p id="demo"></p>
+
+	<button type="button" onclick="replayToTen()">Click vào đây</button>
+
+	<script>
+
+		var x = 1;
+
+
+		function replayToTen(){
+
+			for(var i = 1; i<11; i++){
+
+				stopCount = setTimeout(displayNumber,1000*i);
+
+			} 
+
+		}
+
+		
+		function displayNumber(){
+
+			document.getElementById("demo").innerHTML = x++;
+
+		}
+
+
+	</script>
+  
+
+  
+
+     </body>
+
+
+</html>
+

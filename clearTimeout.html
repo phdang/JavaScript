@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+
+
+
+
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title>Minh họa dùng clearTimeOut </title>
+
+
+     </head>
+
+
+
+
+     <body>
+
+	<p id="demo"></p>
+
+
+	<button type="button" onclick="start = setTimeout(displayNumber,1000);">Start</button>
+
+	<button type="button" onclick="clearTimeout(start)">Stop</button>
+
+
+	<script>
+
+		var x = 100;
+
+		function displayNumber(){
+
+			x++;
+				
+			var y = x/100;			
+
+			document.getElementById("demo").innerHTML = y;
+			
+			start = setTimeout(displayNumber,10);
+				
+			
+		}
+		
+		
+	</script>
+  
+
+  
+
+     </body>
+
+
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+
+
+
+
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title>Minh họa dùng hộp thoại confirm </title>
+
+
+     </head>
+
+
+
+
+     <body>
+
+	<p id="demo"></p>
+
+	<button type="button" onclick="confirmBox()">Click vào đây</button>
+
+
+	<script>
+
+		function confirmBox(){
+
+			if(confirm("Bấm vào nút Ok  để tiếp tục")){
+
+				document.getElementById("demo").innerHTML="Bạn muốn tiếp tục";
+
+			}else{
+
+				document.getElementById("demo").innerHTML="Bạn không muốn tiếp tục";
+
+			} 
+
+		}
+
+	</script>
+  
+
+  
+
+     </body>
+
+
+</html>
+

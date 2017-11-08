@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+
+
+	<style type="text/css">
+
+
+
+
+
+
+
+	</style>
+
+
+	<meta charset ="UTF-8">
+
+	<title>Minh họa dùng setInterVal() và clearInterval() </title>
+
+
+     </head>
+
+
+
+
+     <body>
+
+	<p id="demo"></p>
+
+
+
+	<button type="button" onclick="clearInterval(start)">Stop</button>
+
+
+	<script>
+
+		var start = setInterval(displayTime, 1000);
+
+		function displayTime(){
+				
+			var d = new Date();			
+
+			document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+			
+		}
+		
+		
+	</script>
+  
+
+  
+
+     </body>
+
+
+</html>
+
