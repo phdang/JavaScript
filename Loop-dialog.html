@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>For</title>
+
+<script>
+
+	/*
+	const intergerInputString = prompt("Nhập số nguyên: ","");
+
+	const intergerInput = parseInt(intergerInputString);
+
+	if (isNaN(intergerInput)){
+
+		document.write("Số nguyên không hợp lệ");
+
+	}else{
+
+		for(var i = 1; i < 10; i++){
+
+		document.write(intergerInput + " x " + i + " = " + intergerInput*i +"<br>");
+
+		}
+	}
+
+	*/
+
+</script>
+
+<script>
+
+
+	function bangCuuChuong(){
+
+		document.write('<div id="container" class = "container">');
+
+			document.write('<h2> Bảng cửu chương </h2> <br>');
+
+			document.write('<table>');
+
+				document.write('<tr>');
+
+					for(var i = 1; i < 10; i++){
+
+						document.write('<td style="width:100px;">');
+
+						for (var j =1; j <10; j++){
+
+							document.write(i + " x " + j + " = " + i*j + "<br>");
+
+						}
+
+						document.write('</td>');
+
+					}
+
+				document.write('</tr>');
+
+			document.write('</table>');
+
+		document.write('</div>');
+
+	}
+
+bangCuuChuong();
+
+/*
+function taoBang(m,n){
+
+	document.write('<table>');
+
+			for(var i = 0; i < m; i++){
+
+				document.write('<tr>');
+
+				for (var j = 0; j < n; j++){
+
+					document.write('<td style="width: 100px;"></td>');
+
+				}
+
+				document.write('</tr>');
+			}
+	document.write('</table>');
+}
+
+taoBang(3,3);
+*/
+
+/*
+
+var soDuong = parseInt(prompt("Nhap vao mot so duong: ", ""));
+
+var tong = 0;
+
+while(soDuong > 0){
+
+	tong += soDuong;
+
+	soDuong = parseInt(prompt("Nhap vao mot so duong: ",""));
+
+}
+
+
+document.write("Tong so duong: " + tong);
+
+*/
+
+//
+// function taoBang(row,col){
+//
+// 	document.write('<div class="container">');
+//
+// 	var i = 0;
+//
+// 	document.write('<table>');
+//
+// 			while(i < row){
+//
+// 				document.write('<tr>');
+//
+// 				var j = 0;
+//
+// 				while (j < col){
+//
+// 					document.write('<td></td>');
+//
+// 					j++;
+//
+// 				}
+//
+// 				document.write('</tr>');
+//
+// 				i++;
+// 			}
+//
+// 	document.write('</table>');
+// }
+//
+// do{
+//
+//
+// 	var soDong = parseInt(prompt("Nhap vao so dong: ", ""));
+//
+// }while (soDong<=0)
+//
+//
+//
+// do{
+//
+//
+// 	var soCot = parseInt(prompt("Nhap vao so cot: ", ""));
+//
+// }while (soCot<=0)
+//
+//
+// document.write('</div>');
+//
+// taoBang(soDong,soCot)
+
+</script>
+
+
+<style>
+
+	.container{
+
+		width:90%;
+		margin:auto;
+
+	}
+
+	table, td{
+
+		border: 1px solid black;
+
+		border-collapse: collapse;
+
+	}
+
+	td{
+
+		width:50px;
+
+		height:50px;
+
+	}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

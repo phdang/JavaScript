@@ -4,6 +4,20 @@
 
 <head>
 
+  <!-- <link href="../HTML5_Projects/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link rel= "stylesheet" href="../HTML5_Projects/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link href="../HTML5_Projects/animate.css" rel="stylesheet">
+
+	<script src="../HTML5_Projects/jquery-3.2.1.min.js"></script>
+
+	<!-- <script src="../HTML5_Projects/bootstrap.min.js"></script> -->
+  <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+  <!-- <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css"> -->
+  <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+  <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="register-js.js"></script>
 
 
   <style type="text/css">
@@ -21,6 +35,20 @@
       margin-bottom: 10px;
 
     }
+
+    .AlertError{
+
+      margin:0px;
+      padding-top:15px;
+      font-size:13px;
+      color:red;
+    }
+
+    .ui-widget{
+
+      font-size:14px;
+    }
+
   </style>
 
 
@@ -30,31 +58,19 @@
 
 
 </head>
-
-
-
-
 <body>
-
-
-
-
-  <script>
-
-  </script>
-
-  <form action="analysis.html" method="post">
+  <form action="analysis.html" method="post" onsubmit="return checkInfo()">
 
     <table width="800px" cellpadding="5px">
 
-      <caption> <strong> Đăng kí thành viên </strong></caption>
+      <caption> <strong>Đăng kí thành viên</strong></caption>
 
       <tr>
 
         <td width="40%"><label for="user">Tên đăng nhập</label></td>
 
         <td>
-          <input type="text" name="user" id="user" placeholder="Tên của bạn" required>
+          <input type="text" name="user" id="user" placeholder="Tên của bạn" autofocus>
         </td>
 
       </tr>
@@ -74,7 +90,7 @@
 
         <td><label for="pass">Mật khẩu</label></td>
 
-        <td> <input type="password" name="pass" id="pass" placeholder="Mật khẩu" required>
+        <td> <input type="password" name="pass" id="pass" placeholder="Mật khẩu">
 
         </td>
 
@@ -84,7 +100,7 @@
 
         <td><label for="retypepass">Nhập lại mật khẩu</label></td>
 
-        <td> <input type="password" name="retypepass" id="retypepass" placeholder="Nhập lại mật khẩu" required>
+        <td> <input type="password" name="retypepass" id="retypepass" placeholder="Nhập lại mật khẩu">
 
         </td>
 
@@ -96,7 +112,9 @@
 
         <td>
 
-          <select name="day" id="day">
+          <input type="text" id="dob" readonly>
+
+          <!-- <select name="day" id="day">
 
 							<option value="1">Ngày 1  </option>
 							<option value="2">Ngày 2  </option>
@@ -124,7 +142,7 @@
 							<option value="4">Năm 1997  </option>
 							<option value="5">Năm 1998  </option>
 
-						</select>
+						</select> -->
 
 
         </td>
@@ -149,7 +167,7 @@
 
           <td>
 
-            <textarea name="address" id="address" rows="5" cols="45"> </textarea>
+            <textarea name="address" id="address" rows="7" cols="45"> </textarea>
 
           </td>
       </tr>
@@ -172,7 +190,7 @@
 
             <label>	<input type ="checkbox" value= = "1">Lướt web </label>
 
-            <label> <input type ="checkbox" value= = "2">Chơi tdể thao</label>
+            <label> <input type ="checkbox" value= = "2">Chơi thể thao</label>
 
             <label> <input type ="checkbox" value= = "3">Đọc báo</label>
 
@@ -187,6 +205,10 @@
       </td>
 
     </table>
+
+<div id="dialog" title="Basic dialog">
+  <p>Welcome to the World of Dang</p>
+</div>
 
   </form>
 

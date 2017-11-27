@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+	div
+	{
+		width:400px;
+		height:300px;
+		border:1px solid red;
+		background-color:yellow;
+		transition:width 1s 0s linear;
+	}
+</style>
+<script>
+	//Khai báo hàm
+	function changeDiv(id)
+	{
+		//Chọn đối tượng cần tương tác
+		var obj=document.getElementById(id);
+
+		//Thay đổi định dạng (style) của đối tượng
+		obj.style.backgroundColor='green';
+		obj.style.width='300px';
+		//obj.style.visibility='hidden';
+
+		//Thay đổi nội dung bên trong
+		//alert(obj.innerHTML); get
+		alert(obj.textContent);
+		obj.innerHTML='<h2> Tieu de </h2>';
+	}
+
+	//Gọi hàm
+	//changeDiv('Hello');
+	//changeDiv('Hi');
+</script>
+</head>
+
+<body>
+<div id="d1" style="">Div <b>1</b></div>
+<div id="d2" style="">Div 2</div>
+<button onClick="changeDiv('d1')">Change div 1</button>
+<button onClick="changeDiv('d2')">Change div 2</button>
+</body>
+</html>
