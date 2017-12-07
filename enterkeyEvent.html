@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+i = 0;
+$(document).ready(function(){
+	
+    $("textarea").keypress(function(e){
+    	if (e.keyCode == 13) {
+        
+        	$("span").text('Enter pressed ' + ++i);
+        }
+    });
+    $("button").click(function(){
+    	var e = $.Event("keypress");
+    	e.keyCode = 13;
+	var obj = document.getElementsByTagName("textarea");
+	obj[0].value += "\n";
+	/*textArea = obj[0].value;
+	const len = textArea.length;
+	var textModified = "";
+	for (j=0;j < len; j++){
+		if (textArea[j]==="\n") {
+			textModified += "&#92;n";
+		} else {
+			textModified += textArea[j]; 
+		}
+	}
+	document.getElementById("demo").innerHTML=textModified;*/ 
+    	$("textarea").trigger(e);
+     });
+});
+</script>
+</head>
+<body>
+
+ <textarea cols = "50" rows = "20"></textarea>
+
+<p>Keypresses: <span>Enter key is not pressed in the textarea tag</span></p>
+<button>Trigger the keypress event for the textarea field</button>
+</body>
+</html>
+
