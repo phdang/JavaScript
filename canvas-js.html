@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Xác định điểm nằm trong hay ngoài </title>
+  <meta charset="utf-8">
+<style>
+  div {
+    width: 400px;
+    height: 400px;
+    border: 4px dotted blue;
+    overflow: auto;
+  }
+  p#demo {
+    font-size: 24px;
+    font-family: serif;
+    color: red;
+  }
+  p#huongdan {
+    font-size: 20px;
+    font-family: serif;
+    color:green;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<h2> Thuật toán minh hoạ mẫu</h2>
+<div>
+  <canvas id="myCanvas" width="1000" height="1000" style="border:1px solid blue;" onclick = "definePointInPolygon(event)">
+  Your browser does not support the HTML5 canvas tag.</canvas>
+</div>
+<br>
+<button onclick="reset()">Reset</button>
+<button onclick="stopDrawingLines()">Stop Drawing Line</button>
+<p id="demo"></p>
+<p id="huongdan">
+  Đầu tiên hãy nhấn chuột vào các vị trí trong khung màu xanh dương để vẽ, sau lần click lần thứ 2 thì sẽ vẽ ra 1 đoạn thẳng,
+  sau đó cứ sau mỗi lần click sẽ tạo ra thêm một đoạn. Cứ click đến khi nào tạo được polygon. Sau khi tạo xong polygon thì nhấn
+  nút Stop Drawing Line bên dưới để ngừng vẽ. Sau cùng chỉ việc nhấn vào lại trong khung màu xanh dương để xem điểm vừa click có nằm
+  trong polygon màu đỏ đã được tạo trước đó hay không.
+</p>
+<script>
+var points  = [];
+var khoangY = [];
+var phuongTrinhDuongThang = [];
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var stop = false;
+var soDiemCat = 0;
+ctx.strokeStyle = '#ff0000';
+function stopDrawingLines() {
+  stop = true;
+}
+function reset() {
+  location.reload();
+}
+function definePointInPolygon(event) {
+    if (!stop) {
+      var x = event.offsetX;
+      var y = event.offsetY;
+      points.push([x,y]);
+      const lastIndex = points.length - 1;
+      //console.log(points[lastIndex]);
+      if (lastIndex > 0) {
+        ctx.moveTo(points[lastIndex-1][0],points[lastIndex-1][1]);
+        ctx.lineTo(points[lastIndex][0],points[lastIndex][1]);
+        ctx.stroke();
+        const heSoGoc = (points[lastIndex-1][1] - points[lastIndex][1])/(points[lastIndex-1][0] - points[lastIndex][0]);
+        khoangY.push([points[lastIndex-1][1],points[lastIndex][1]]);
+        const b       =  points[lastIndex][1] - heSoGoc * points[lastIndex][0]; // y = ax + b
+        phuongTrinhDuongThang.push([heSoGoc,b]);
+        const index   = phuongTrinhDuongThang.length - 1;
+        //console.log(phuongTrinhDuongThang[index]);
+      }
+    } else {
+      //check Point
+      var x = event.offsetX;
+      var y = event.offsetY;
+      const index = phuongTrinhDuongThang.length;
+      for (var i = 0; i < index; i++ ) {
+        const minY = Math.min(khoangY[i][0],khoangY[i][1]);
+        const maxY = Math.max(khoangY[i][0],khoangY[i][1]);
+        const toaDoNghiemY = x*phuongTrinhDuongThang[i][0] + phuongTrinhDuongThang[i][1];
+        //console.log(minY);
+        //console.log(maxY);
+        //console.log(toaDoNghiemY);
+        //console.log(y);
+        //console.log("***********************************************");
+        if ((phuongTrinhDuongThang[i][0] != 0) && (toaDoNghiemY > y) && (toaDoNghiemY > minY) && (toaDoNghiemY < maxY)) {
+          soDiemCat++;
+        }
+      }
+      if (soDiemCat%2) {
+        document.getElementById('huongdan').innerHTML = "";
+        document.getElementById('demo').innerHTML = "Điểm này nằm trong";
+        soDiemCat = 0;
+      } else {
+        document.getElementById('huongdan').innerHTML = "";
+        document.getElementById('demo').innerHTML = "Điểm này nằm ngoài";
+        soDiemCat = 0;
+      }
+    }
+}
+</script>
+</body>
+</html>
